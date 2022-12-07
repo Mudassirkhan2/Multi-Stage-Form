@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Stage-Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="steps-container">
+                <!-- step-1  -->
+                <div class="steps-whole-container">
+                    <p class="numbers background" id="number-1">
+                        1
+                    </p>
+                    <div class="steps-container-info">
+                        <p class="light-color">STEP 1</p>
+                        <p class="steps-info">
+                            YOUR INFO
+                        </p>
+                    </div>
+                </div>
+
+                <!-- step-2  -->
+
+                <div class="steps-whole-container">
+                    <p class="numbers " id="number-2">
+                        2
+                    </p>
+                    <div class="steps-container-info">
+                        <p class="light-color">STEP 2</p>
+                        <p class="steps-info">
+                            SELECT PLAN
+                        </p>
+                    </div>
+                </div>
+
+                <!-- step-3  -->
+
+                <div class="steps-whole-container">
+                    <p class="numbers " id="number-3">
+                        3
+                    </p>
+                    <div class="steps-container-info">
+                        <p class="light-color">STEP 3</p>
+                        <p class="steps-info">
+                            ADD-ONS
+                        </p>
+                    </div>
+                </div>
+
+                <!-- step-4 -->
+
+                <div class="steps-whole-container">
+                    <p class="numbers " id="number-4">
+                        4
+                    </p>
+                    <div class="steps-container-info">
+                        <p class="light-color">STEP 4</p>
+                        <p class="steps-info">
+                            SUMMARY
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- details step 1 -->
+
+            <div class="details-container " id="details">
+                <h1>Personal info</h1>
+                <p class="para">Please provide your name,email address,and phone number.</p>
+
+                <!-- form -->
+               
+                    <div class="details-flex">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="e.g.stephen King" required="required" >
+                    </div>
+                    <div class="details-flex">
+                        <label for="email">Email Address</label>
+                        <input type="text" name="email" id="email" placeholder="e.g.stephenking@lorem.com" >
+                    </div>
+                    <div class="details-flex">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone" placeholder="e.g.+1 234 567 890" 
+                            maxlength="10">
+                        <button class="next" id="number1-btn">
+                            Next Step
+                        </button>
+                    </div>
+             
+
+            </div>
+
+
+            <!-- step-2 details-container  monthly-->
+
+
+            <div class="details-container hidden" id="step2_monthly">
+                <h1>Select your plan</h1>
+                <p class="para">You have the option of monthly and yearly billing</p>
+                <div class="grid-container">
+
+
+                    <div class="aracade-container">
+                        <label for="arcade" class="arcade">
+                            <img src="assets/images/icon-arcade.svg" alt="icon-arcade">
+
+                            <h2>Arcade</h2>
+                            <p><i class="fa-solid fa-dollar-sign"></i>9/mo</p>
+                        </label>
+                        <input type="radio" name="radio" id="arcade" value="Arcade(Monthly)" checked>
+                    </div>
+
+
+
+                    <div class="advanced-container">
+                        <label for="advanced">
+                            <img src="assets/images/icon-advanced.svg" alt="icon-advanced">
+
+                            <h2>Advanced</h2>
+                            <p><i class="fa-solid fa-dollar-sign"></i>12/mo</p>
+                        </label>
+                        <input type="radio" name="radio" id="advanced" value="Advanced(Monthly)">
+                    </div>
+
+
+
+                    <div class="pro-container">
+                        <label for="pro">
+                            <img src="assets/images/icon-pro.svg" alt="icon-pro">
+
+                            <h2>Pro</h2>
+                            <p><i class="fa-solid fa-dollar-sign"></i>15/mo</p>
+                        </label>
+                        <input type="radio" name="radio" id="pro" value="Pro(Monthly)">
+                    </div>
+
+
+                </div>
+                <div class="toggle-container">
+                    <p class="selected">Monthly</p>
+                    <button class="toggle" id="toggleoff"><i class="fa-solid fa-toggle-off"></i></button>
+                    <p>Yearly</p>
+                </div>
+
+                <div class="btn-container">
+                    <button class="go-back" id="gobackstep2monthly">
+                        Go Back
+                    </button>
+                    <button class="next" id="step2nextmonthly" >
+                        Next Step
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- step-2 details-container  yearly-->
+
+
+
+            <div class="details-container hidden" id="step2_yearly">
+                <h1>Select your plan</h1>
+                <p class="para">You have the option of monthly and yearly billing</p>
+                <div class="grid-container">
+
+
+                    <div class="aracade-container">
+                        <label for="arcadeyr" class="arcade">
+                            <img src="assets/images/icon-arcade.svg" alt="icon-arcade">
+
+                            <h2>Arcade</h2>
+                            <p><i class="fa-solid fa-dollar-sign"></i>90/yr</p>
+                            <p class="free">2 months free</p>
+                        </label>
+                        <input type="radio" name="radioyr" id="arcadeyr" value="Arcade(Yearly)" checked>
+                    </div>
+
+
+
+                    <div class="advanced-container">
+                        <label for="advancedyr">
+                            <img src="assets/images/icon-advanced.svg" alt="icon-advanced">
+
+                            <h2>Advanced</h2>
+                            <p><i class="fa-solid fa-dollar-sign"></i>120/yr</p>
+                            <p class="free">2 months free</p>
+
+                        </label>
+                        <input type="radio" name="radioyr" id="advancedyr"value="Advanced(Yearly)" >
+                    </div>
+
+
+
+                    <div class="pro-container">
+                        <label for="proyr">
+                            <img src="assets/images/icon-pro.svg" alt="icon-pro">
+
+                            <h2>Pro</h2>
+                            <p><i class="fa-solid fa-dollar-sign"></i>150/yr</p>
+                            <p class="free">2 months free</p>
+
+                        </label>
+                        <input type="radio" name="radioyr" id="proyr" value="Pro(yearly)" >
+                    </div>
+
+
+                </div>
+                <div class="toggle-container">
+                    <p>Monthly</p>
+                    <button class="toggle" id="toogleon"> <i class="fa-solid fa-toggle-on"></i></button>
+                    <p class="selected">Yearly</p>
+                </div>
+
+                <div class="btn-container">
+                    <button class="go-back " id="gobackstep2yearly">
+                        Go Back
+                    </button>
+                    <button class="next" id="step2nextyearly" >
+                        Next Step
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- step-3 details-container  monthly-->
+
+
+            <div class="details-container hidden" id="step3_monthly">
+                <h1>Pick adds-ons</h1>
+                <p class="para">Add-ons help enhance your gaming experience</p>
+                <div class="checklist-whole-container">
+
+                    <!-- online-services -->
+
+                    <div class="checklist-container">
+                        <label for="online-services">
+                            <input type="checkbox" value="online-services" id="online-services" name="checkbox">
+                            <div class="checklist">
+                                <p>Online service</p>
+                                <p class="light">
+                                    Access to multiplayer games
+                                </p>
+
+                            </div>
+                            <p class="amount">+<i class="fa-solid fa-dollar-sign"></i>1/mo</p>
+                        </label>
+
+                    </div>
+
+                    <!-- large-storage -->
+
+                    <div class="checklist-container">
+
+                        <label for="large-storage">
+                            <input type="checkbox" value="large-storage" id="large-storage"name="checkbox">
+                            <div class="checklist">
+                                <p>Large storage</p>
+                                <p class="light">
+                                    Extra 1TB of cloud save
+                                </p>
+
+                            </div>
+                            <p class="amount">+<i class="fa-solid fa-dollar-sign"></i>2/mo</p>
+                        </label>
+
+                    </div>
+                    <!-- Custom -->
+                    <div class="checklist-container">
+                        <label for="Custom">
+                            <input type="checkbox" value="Custom" id="Custom" name="checkbox">
+                            <div class="checklist">
+                                <p>Customizable profile</p>
+                                <p class="light">
+                                    Custom theme on your profile
+                                </p>
+
+                            </div>
+                            <p class="amount">+<i class="fa-solid fa-dollar-sign"></i>2/mo</p>
+                        </label>
+
+                    </div>
+
+
+                </div>
+                <div class="btn-container">
+                    <button class="go-back" id="gobackstep3monthly">
+                        Go Back
+                    </button>
+                    <button class="next" id="step3nextmonthly">
+                        Next Step
+                    </button>
+                </div>
+
+
+
+
+            </div>
+
+
+            <!------ step-3 details-container  yearly-------->
+
+            <div class="details-container hidden" id="step3_yearly">
+                <h1>Pick adds-ons</h1>
+                <p class="para">Add-ons help enhance your gaming experience</p>
+                <div class="checklist-whole-container">
+
+                    <!-- online-services -->
+                        <div class="checklist-container">
+                            <label for="online-servicesyr">
+                                <input type="checkbox" value="online-services" id="online-servicesyr"name="checkboxyr">
+                                <div class="checklist">
+                                    <p>Online service</p>
+                                    <p class="light">
+                                        Access to multiplayer games
+                                    </p>
+
+                                </div>
+                                <p class="amount">+<i class="fa-solid fa-dollar-sign"></i>10/yr</p>
+                            </label>
+
+                        </div>
+
+                        <!-- large-storage -->
+
+                        <div class="checklist-container">
+                            <label for="large-storageyr">
+                                <input type="checkbox" value="large-storage" id="large-storageyr"name="checkboxyr">
+                                <div class="checklist">
+                                    <p>Large storage</p>
+                                    <p class="light">
+                                        Extra 1TB of cloud save
+                                    </p>
+
+                                </div>
+                                <p class="amount">+<i class="fa-solid fa-dollar-sign"></i>20/yr</p>
+                            </label>
+
+                        </div>
+                        <!-- Custom -->
+                        <div class="checklist-container">
+                            <label for="Customyr">
+                                <input type="checkbox" value="Custom" id="Customyr" name="checkboxyr">
+                                <div class="checklist">
+                                    <p>Customizable profile</p>
+                                    <p class="light">
+                                        Custom theme on your profile
+                                    </p>
+
+                                </div>
+                                <p class="amount">+<i class="fa-solid fa-dollar-sign"></i>20/yr</p>
+                            </label>
+
+                        </div>
+                    </div>
+
+
+                <div class="btn-container">
+                    <button class="go-back" id="gobackstep3yearly">
+                        Go Back
+                    </button>
+                    <button class="next" id="step3nextyearly">
+                        Next Step
+                    </button>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+            <!-- finishing up -->
+
+
+            <div class="details-container hidden" id="step4">
+                <h1>Finishing up</h1>
+                <p class="para">Double-check everything looks OK before conforming.</p>
+
+                <div class="selected-packs-whole">
+                    <div class="selected-packs">
+
+                        <div class="flex-container-yr/mn">
+                            <span class="pack-type">pack-type</span>
+                            <p class="change">Change</p>
+                        </div>
+                        <p class="amount-chosen">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </p>
+              
+                    </div>
+                    <hr>
+
+
+                    <div class="selected-packscustom">
+
+                        
+                    </div>
+
+
+                </div>
+
+                <div class="total-container">
+                    <p>Total(per year)</p>
+                    <p class="total"><i class="fa-solid fa-dollar-sign"></i>/yr</p>
+                </div>
+
+
+
+                <div class="btn-container">
+                    <button class="go-back" id="gobackstep4">
+                        Go Back
+                    </button>
+                    <button class="confirm" id="confirm">
+                        Confirm
+                    </button>
+                </div>
+
+
+
+            </div>
+
+
+
+            <!-- thank you  -->
+            <div class="details-container hidden " id="thankyou">
+
+                <div class="thankyou-container">
+
+
+                    <img src="assets/images/icon-thank-you.svg" alt="icon-thank-you">
+                    <h1>Thank you!</h1>
+                    <p class="para">
+                        Thanks for confirming your subscription! We hope you have fun
+                        using our platform. If you ever need support, please feel free
+                        to email us at support@mudassir222001.com.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
